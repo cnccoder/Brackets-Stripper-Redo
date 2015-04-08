@@ -6,11 +6,13 @@
 @background: #242424;
 @foreground: #F8F8F2;
 
-@ashphalt: #333639;
-@emerald: rgb(21, 216, 128);
-@grass: rgb(29, 255, 0);
-@powder: rgba(33, 171, 216, 1);
-@river: rgb(82, 227, 246);
+@ashphalt: #3C3F41;
+@emerald:  #15d880;
+@grass:    #1dff00;
+@powder:   #21abd8;
+@river:    #52e3f6;
+
+@lightyText: #d9d9d9;
 
 /* Code Styling */
 .CodeMirror, .CodeMirror-scroll {
@@ -19,8 +21,8 @@
 }
 
 .CodeMirror-focused .CodeMirror-activeline-background {
-    background: #3C3F41;
-    color: #d9d9d9;
+    background-color: @ashphalt;
+    color: @lightyText;
 }
 
 &.show-line-padding .CodeMirror-focused .CodeMirror-activeline-background {
@@ -29,12 +31,12 @@
 
 .CodeMirror-focused .CodeMirror-activeline {
     .CodeMirror-gutter-elt {
-        background-color: #3C3F41;
-        color: #d9d9d9;
+        background-color: @ashphalt;
+        color: @lightyText;
     }
     .inline-widget .CodeMirror-gutter-elt {
-        background-color: #3C3F41;
-        color: #d9d9d9;
+        background-color: @ashphalt;
+        color: @lightyText;
     }
 }
 
@@ -142,46 +144,59 @@
     border-left-color: #1B1B1B;
     background: #1c1c1c;
 }
+
 div.CodeMirror-selected {
     background: #444 !important;
 }
+
 .CodeMirror-guttermarker {
     color: #F8F8F2;
 }
+
 .CodeMirror-guttermarker-subtle {
     color: #272822;
 }
+
 .CodeMirror-linenumber {
     color: #5c5c5c;
-    padding: 0 10px 0 5px;
+    padding: 0;
+    left: 0px !important;
 }
+
 .CodeMirror-cursor {
     border-left: 1px solid #fff !important;
-    box-shadow: 0 0 10px white;
+    box-shadow: 0 0 5px #fff;
+    transition: .2s;
 }
+
 .CodeMirror-activeline-background,
 .CodeMirror-focused .CodeMirror-activeline .CodeMirror-gutter-elt {
     background: #2c2c2c !important;
 }
+
 .CodeMirror-focused .CodeMirror-activeline .CodeMirror-gutter-elt {
     color: #fff;
     text-shadow: 0 0 3px white;
 }
+
 .CodeMirror-focused .CodeMirror-activeline .inline-widget .CodeMirror-gutter-elt {
     color: #767676;
 }
+
 .CodeMirror-matchingbracket {
     background-color: transparent !important;
     color: #1dff00 !important;
     text-shadow: 0 0 10px #1dff00;
     font-weight: bold;
 }
+
 .CodeMirror-nonmatchingbracket {
     color: #f00 !important;
     text-shadow: 0 0 10px #f00;
     backface-visibility: hidden;
     font-weight: bold;
 }
+
 .CodeMirror-matchingtag {
     background-color: transparent;
     border-bottom: 1px solid @grass;
@@ -211,7 +226,10 @@ div.CodeMirror-selected {
     text-shadow: 0 0 10px #1dff00;
 }
 
-.CodeMirror-foldgutter, .CodeMirror-foldgutter-open, .CodeMirror-foldgutter-folded, .CodeMirror-foldgutter-blank {
+.CodeMirror-foldgutter,
+.CodeMirror-foldgutter-open,
+.CodeMirror-foldgutter-folded,
+.CodeMirror-foldgutter-blank {
     margin-right: 10px;
 }
 
@@ -219,13 +237,18 @@ div.CodeMirror-selected {
 * Trailing Whitespace (https://github.com/DennisKehrig/brackets-show-whitespace)
 * --------------------------------------------------------------------*/
 
-.cm-dk-whitespace-space:before, .cm-dk-whitespace-tab:before {
+.cm-dk-whitespace-space:before,
+.cm-dk-whitespace-tab:before {
     background-color: rgba(128, 128, 128, 0.15);
 }
-.cm-dk-whitespace-leading-space:before, .cm-dk-whitespace-leading-tab:before {
+
+.cm-dk-whitespace-leading-space:before,
+.cm-dk-whitespace-leading-tab:before {
     background-color: rgba(128, 128, 128, 0.15);
 }
-.cm-dk-whitespace-trailing-space:before, .cm-dk-whitespace-trailing-tab:before {
+
+.cm-dk-whitespace-trailing-space:before,
+.cm-dk-whitespace-trailing-tab:before {
     background-color: red;
 }
 
@@ -241,187 +264,229 @@ ins.jstree-icon {
 * Brackets Git (https://github.com/zaggino/brackets-git)
 * --------------------------------------------------------------------*/
 
-.btn-alt-quiet {
-    transition: all 0.25s ease-in-out;
-}
+.main-view {
+    .btn-alt-quiet {
+        transition: all 0.25s ease-in-out;
+        vertical-align: middle;
+        border-radius: 0;
 
-#project-files-header .btn-alt-quiet:hover {
-    background: rgba(38, 40, 42, 1)!important;
-    box-shadow: none;
-}
+        &:hover {
+            background-color: rgb(38, 40, 42) !important;
+            box-shadow: none;
+        }
+    }
 
-#project-files-header {
-    background: @ashphalt;
-    position: relative;
-    top: -1px;
-    padding: 12px 0 5px 12px;
-}
+    #project-files-header {
+        background: @ashphalt;
+        position: relative;
+        top: -1px;
+        height: 40px;
+        box-sizing: border-box;
+    }
 
-#project-dropdown-toggle {
-    margin: -3px 12px -2px -5px;
+    #project-dropdown-toggle {
+        margin: -3px 12px -2px -5px;
+    }
+
+    #git-branch-dropdown-toggle, .git-close-not-modified {
+        display: none;
+        opacity: 0;
+        visibility: collapse;
+    }
+
+    .brackets-git-gutter-removed,
+    .brackets-git-gutter-added,
+    .brackets-git-gutter-modified {
+        width: 4px;
+    }
 }
 
 /**
 * Custom Work For Brackets (https://github.com/DH3ALEJANDRO/custom-work-for-brackets)
 * --------------------------------------------------------------------*/
 
-#workfile-avril {
-    top: 42px;
-    right: 0;
-}
-
-.all-workfile {
-    background: @ashphalt;
-    opacity: 1;
-}
-
-.AllTabWork, .avril-parent-work, .avril-parent-work .open-files-container ul, .avril-tabs-work, .avril-tabs-work div, .avril-tabs-work li {
-    height: 40px!important;
-}
-
-.btn-mainToolbar-bks, .btn-sidebar-bks, .all-workfile, .avril-parent-work .working-set-splitview-btn, .avril-parent-work .working-set-option-btn {
-    top: 10px!important;
-}
-
-.btn-mainToolbar-bks, .btn-sidebar-bks, .all-workfile {
-    margin-right: 15px;
-}
-
-.btn-sidebar-bks {
-    color: rgba(33, 171, 216, 1);
-}
-
-#working-set-list-container>div:last-child ul {
-    padding-bottom: 15px!important;
-}
-
-.avril-tabs-work {
-    background-color: @ashphalt!important;
-}
-
-.avril-parent-work {
-    box-shadow: -10px 0px 19px -5px rgba(0,0,0,0.5);
-    z-index: 10;
-}
-
-.avril-parent-work, .todoFunction, .avril-tabs-work ul#sortableOneWork li, .avril-tabs-work div {
+.avril-parent-work,
+.todoFunction,
+.avril-tabs-work ul#sortableOneWork li,
+.avril-tabs-work div {
     height: 40px;
+    line-height: 40px;
 }
 
-.avril-tabs-work ul li {
-    padding: 8px 30px 8px 20px;
-    height: 20px!important;
-    border-bottom: 3px solid @ashphalt;
-
-    &.selected {
-        background: rgb(38, 40, 42)!important;
-        border-bottom: 3px solid @powder!important;
-        height: 20px!important;
-    }
-
-    &:hover {
-        background: rgb(38, 40, 42)!important;
-        height: 20px!important;
-        border-bottom: 3px solid @powder;
-    }
+.AllTabWork,
+.avril-parent-work,
+.avril-parent-work .open-files-container ul,
+.avril-tabs-work,
+.avril-tabs-work div,
+.avril-tabs-work li {
+    height: 39px;
 }
 
-.open-files-container ul li:before {
-    display: none;
+.dark .avril-parent-work {
+    background: @ashphalt;
+    z-index: 10;
+
+    #workfile-avril {
+        top: 42px;
+        right: 0;
+    }
+
+    .all-workfile {
+        background: @ashphalt;
+        opacity: 1;
+    }
+
+    .btn-mainToolbar-bks,
+    .btn-sidebar-bks,
+    .all-workfile,
+    .working-set-splitview-btn,
+    .working-set-option-btn {
+        top: 10px !important;
+    }
+
+    .btn-sidebar-bks {
+        color: rgba(33, 171, 216, 1);
+    }
+
+    #working-set-list-container {
+        background: @ashphalt;
+    }
+
+    #working-set-list-container > div:last-child ul {
+        padding-bottom: 15px !important;
+    }
+
+    ul li {
+        padding: 8px 30px 8px 20px;
+        height: 20px !important;
+        border-bottom: 3px solid @ashphalt;
+
+        a {
+            vertical-align: inherit;
+        }
+
+        &.selected, &:hover {
+            background: rgb(38, 40, 42) !important;
+            border-bottom: 3px solid @powder !important;
+            height: 20px !important;
+        }
+    }
+
+    .open-files-container ul li:before {
+        display: none;
+    }
+
+    .working-set-view {
+        background: @ashphalt;
+    }
 }
 
 /**
 * Stripper UI Theme (https://github.com/Visualbam/Brackets-Stripper)
 * --------------------------------------------------------------------*/
 
-// Right bar with extension icons
-#main-toolbar {
+.platform-win.dark ::-webkit-scrollbar {
     background: #242424;
-    padding: 0;
-
-    .buttons > a, #main-toolbar .bottom-buttons > a, #main-toolbar .bottom-buttons > a:hover {
-        font-size: 18px!important;
-        text-decoration: none;
-    }
+    width: 8px;
+    height: 8px;
 }
 
-// Text Highlight
-.CodeMirror .CodeMirror-selected {
-    background: @powder!important;
-}
+.dark {
+    // Right bar with extension icons
+    #main-toolbar {
+        background: @ashphalt;
+        padding: 0;
 
-// Working file list for when tabs aren't enabled
-#working-set-list-container > div:last-child ul {
-    padding-bottom: 10px;
-}
-
-#project-files-container {
-    padding: 12px 0 0 5px;
-}
-
-#status-bar,
-#status-indicators {
-    background: #1c1c1c;
-    color: #fff;
-}
-
-#status-info {
-    color: #fff;
-    border-top: none;
-}
-
-#working-set-header {
-    background: #1c1c1c;
-    border-right: none;
-}
-#open-files-container {
-    background: #1c1c1c;
-    border-bottom: 1px solid #4c4c4c;
-}
-
-// Sidebar with file list
-.sidebar {
-    background: #1c1c1c;
-
-    .sidebar-selection {
-        border: none;
-        height: 22px;
-
-        &.triangle-visible:before {
-            background: none;
-            border: none;
-            display: none;
+        .buttons > a, #main-toolbar .bottom-buttons > a, #main-toolbar .bottom-buttons > a:hover {
+            font-size: 18px !important;
+            text-decoration: none;
         }
     }
-}
 
-.sidebar-selection-triangle
-.sidebar-selection, .filetree-selection {
-    border-bottom: none;
-}
+    // Text Highlight
+    .CodeMirror .CodeMirror-selected {
+        background: @powder!important;
+    }
 
-.sidebar-selection-triangle {
-    background: none;
-    border: none;
-    border-right: 1px solid #f00;
-    box-shadow: 0 0 5px #f00;
-    width: 0px;
-}
+    // Working file list for when tabs aren't enabled
+    #working-set-list-container > div:last-child ul {
+        padding-bottom: 10px;
+    }
 
-.sidebar-selection-extension, .filetree-selection-extension {
-    height: 22px;
-    border-bottom: none;
-    border-right: 3px solid rgba(33, 171, 216, 0.75);
-}
+    #project-files-container {
+        padding: 12px 0 0 5px;
+    }
 
-.jstree-brackets li .extension, .jstree-brackets li a, .jstree-brackets li a:hover {
-    color: rgba(128, 128, 128, 1);
-}
+    #status-bar,
+    #status-indicators {
+        background: #1c1c1c;
+        color: #fff;
+        border: none;
+    }
 
-.jstree-brackets li.jstree-closed > a, .jstree-brackets li.jstree-open > a {
-    color: white;
-}
+    #status-info {
+        color: #fff;
+        border-top: none;
+    }
 
-.jstree-brackets li.git-ignored > a, .open-files-container li.git-ignored > a {
-    color: rgba(128, 128, 128, 0.5)!important;
+    #working-set-header {
+        background: #1c1c1c;
+        border-right: none;
+    }
+    #open-files-container {
+        background: #1c1c1c;
+        border-bottom: 1px solid #4c4c4c;
+    }
+
+    // Sidebar with file list
+    .sidebar {
+        background: #1c1c1c;
+
+        .sidebar-selection {
+            border: none;
+            height: 22px;
+
+            &.triangle-visible:before {
+                background: none;
+                border: none;
+                display: none;
+            }
+        }
+    }
+
+    .sidebar-selection-triangle .sidebar-selection,
+    .filetree-selection {
+        border-bottom: none;
+    }
+
+    .sidebar-selection-triangle {
+        background: none;
+        border: none;
+        border-right: 1px solid #f00;
+        box-shadow: 0 0 5px #f00;
+        width: 0px;
+    }
+
+    .sidebar-selection-extension,
+    .filetree-selection-extension {
+        height: 22px;
+        border-bottom: none;
+        border-right: 3px solid rgba(33, 171, 216, 0.75);
+    }
+
+    .jstree-brackets li .extension,
+    .jstree-brackets li a,
+    .jstree-brackets li a:hover {
+        color: rgba(128, 128, 128, 1);
+    }
+
+    .jstree-brackets li.jstree-closed > a,
+    .jstree-brackets li.jstree-open > a {
+        color: white;
+    }
+
+    .jstree-brackets li.git-ignored > a,
+    .open-files-container li.git-ignored > a {
+        color: rgba(128, 128, 128, 0.5)!important;
+    }
 }
