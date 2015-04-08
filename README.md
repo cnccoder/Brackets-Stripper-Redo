@@ -4,14 +4,15 @@ I Modified the original [Brackets-Stripper](https://github.com/visualbam/Bracket
 All credit goes to [visualbam](https://github.com/visualbam) for making this awesome theme :)
 Useses modified version of [Monokai Dark Soda](https://github.com/rainje/Monokai-Dark-Soda) for syntax highlighting. For this to be seen properly you must install https://github.com/notasz/brackets-uitheming
 
-By original author:
-
 Screenshots
 ===============
 ### By me:
 ![Brackets-Stripper](https://raw.githubusercontent.com/hendrysadrak/Brackets-Stripper/master/screenshots/stripper-ui.png)
 ### Original:
 ![Brackets-Stripper](http://i57.tinypic.com/6o2441.png)
+
+---------------
+#### By original author:
 
 Features
 ===============
