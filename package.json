@@ -1,13 +1,16 @@
 {
-    "title": "Stripper",
-    "name": "stripper-theme",
-    "description": "A brackets theme focused on readabiity.",
+    "title": "Stripper (CLean UI Redo)",
+    "name": "stripper-theme-redo",
+    "description": "A brackets theme focused on readabiity. Based on the theme made by visualbam - https://github.com/visualbam/Brackets-Stripper",
     "version": "0.1.0",
-    "author": "Bruce McElroy <bruce.mcelroy@gmail.com>",
-    "homepage": "https://github.com/visualbam/Brackets-Stripper",
+    "authors": [
+        "Bruce McElroy <bruce.mcelroy@gmail.com>",
+        "Hendry Sadrak <hendry.sadrak@outlook.com"
+    ],
+    "homepage": "https://github.com/hendrysadrak/Brackets-Stripper",
     "repository": {
         "type": "git",
-        "url": "https://github.com/Visualbam/Brackets-Stripper"
+        "url": "https://github.com/hendrysadrak/Brackets-Stripper"
     },
     "license": "MIT",
     "engines": {
