@@ -8,7 +8,7 @@ By original author:
 
 Screenshot
 ===============
-![Brackets-Stripper](http://i57.tinypic.com/6o2441.png)
+![Brackets-Stripper](https://raw.githubusercontent.com/hendrysadrak/Brackets-Stripper/master/screenshots/stripper-ui.png)
 
 Features
 ===============
