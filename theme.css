@@ -1,6 +1,7 @@
 /**
 * Dark Soda Theme (https://github.com/rainje/Monokai-Dark-Soda)
-* --------------------------------------------------------------------*/
+* --------------------------------------------------------------------
+*/
 /* Define some variables used in multiple places */
 /* Code Styling */
 .CodeMirror,
@@ -215,7 +216,8 @@ div.CodeMirror-selected {
 * ==========*/
 /**
 * Code Folding (https://github.com/thehogfather/brackets-code-folding)
-* --------------------------------------------------------------------*/
+* --------------------------------------------------------------------
+*/
 .CodeMirror-foldgutter-open:after {
   content: "-";
   font-size: 1.2em;
@@ -238,7 +240,8 @@ div.CodeMirror-selected {
 }
 /**
 * Trailing Whitespace (https://github.com/DennisKehrig/brackets-show-whitespace)
-* --------------------------------------------------------------------*/
+* --------------------------------------------------------------------
+*/
 .cm-dk-whitespace-space:before,
 .cm-dk-whitespace-tab:before {
   background-color: rgba(128, 128, 128, 0.15);
@@ -253,13 +256,15 @@ div.CodeMirror-selected {
 }
 /**
 * File Icons (https://github.com/drewbkoch/Brackets-File-Icons)
-* --------------------------------------------------------------------*/
+* --------------------------------------------------------------------
+*/
 ins.jstree-icon {
   font-size: 12px!important;
 }
 /**
 * Brackets Git (https://github.com/zaggino/brackets-git)
-* --------------------------------------------------------------------*/
+* --------------------------------------------------------------------
+*/
 .main-view .btn-alt-quiet {
   transition: all 0.25s ease-in-out;
   vertical-align: middle;
@@ -273,17 +278,16 @@ ins.jstree-icon {
   background: #3c3f41;
   position: relative;
   top: -1px;
-  height: 40px;
+  height: 30px;
   box-sizing: border-box;
+  padding: 3px 0 9px 5px;
 }
 .main-view #project-dropdown-toggle {
   margin: -3px 12px -2px -5px;
 }
-.main-view #git-branch-dropdown-toggle,
 .main-view .git-close-not-modified {
-  display: none;
-  opacity: 0;
-  visibility: collapse;
+  top: 3px !important;
+  right: 0px !important;
 }
 .main-view .brackets-git-gutter-removed,
 .main-view .brackets-git-gutter-added,
@@ -292,13 +296,14 @@ ins.jstree-icon {
 }
 /**
 * Custom Work For Brackets (https://github.com/DH3ALEJANDRO/custom-work-for-brackets)
-* --------------------------------------------------------------------*/
+* --------------------------------------------------------------------
+*/
 .avril-parent-work,
 .todoFunction,
 .avril-tabs-work ul#sortableOneWork li,
 .avril-tabs-work div {
-  height: 40px;
-  line-height: 40px;
+  height: 30px;
+  line-height: 30px;
 }
 .AllTabWork,
 .avril-parent-work,
@@ -306,7 +311,7 @@ ins.jstree-icon {
 .avril-tabs-work,
 .avril-tabs-work div,
 .avril-tabs-work li {
-  height: 39px;
+  height: 29px;
 }
 .dark .avril-parent-work {
   background: #3c3f41;
@@ -325,7 +330,7 @@ ins.jstree-icon {
 .dark .avril-parent-work .all-workfile,
 .dark .avril-parent-work .working-set-splitview-btn,
 .dark .avril-parent-work .working-set-option-btn {
-  top: 10px !important;
+  top: 4px !important;
 }
 .dark .avril-parent-work .btn-sidebar-bks {
   color: #21abd8;
@@ -334,12 +339,13 @@ ins.jstree-icon {
   background: #3c3f41;
 }
 .dark .avril-parent-work #working-set-list-container > div:last-child ul {
-  padding-bottom: 15px !important;
+  padding-bottom: 0px !important;
 }
 .dark .avril-parent-work ul li {
-  padding: 8px 30px 8px 20px;
-  height: 20px !important;
+  padding: 2px 20px 0px 7px;
+  height: inherit;
   border-bottom: 3px solid #3c3f41;
+  box-sizing: border-box;
 }
 .dark .avril-parent-work ul li a {
   vertical-align: inherit;
@@ -348,7 +354,7 @@ ins.jstree-icon {
 .dark .avril-parent-work ul li:hover {
   background: #26282a !important;
   border-bottom: 3px solid #21abd8 !important;
-  height: 20px !important;
+  height: inherit;
 }
 .dark .avril-parent-work .open-files-container ul li:before {
   display: none;
@@ -358,7 +364,8 @@ ins.jstree-icon {
 }
 /**
 * Stripper UI Theme (https://github.com/Visualbam/Brackets-Stripper)
-* --------------------------------------------------------------------*/
+* --------------------------------------------------------------------
+*/
 .platform-win.dark ::-webkit-scrollbar {
   background: #242424;
   width: 8px;
