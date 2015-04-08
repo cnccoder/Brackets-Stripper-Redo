@@ -1,5 +1,10 @@
-# Brackets-Stripper
-UI Theme for Brackets. Useses modified version of [Monokai Dark Soda](https://github.com/rainje/Monokai-Dark-Soda) for syntax highlighting. For this to be seen properly you must install https://github.com/notasz/brackets-uitheming
+# Brackets-Stripper-Redo
+UI Theme for Brackets.
+I Modified the original [Brackets-Stripper](https://github.com/visualbam/Brackets-Stripper) to an cleaner version of it.
+All credit goes to [visualbam](https://github.com/visualbam) for making this awesome theme :)
+Useses modified version of [Monokai Dark Soda](https://github.com/rainje/Monokai-Dark-Soda) for syntax highlighting. For this to be seen properly you must install https://github.com/notasz/brackets-uitheming
+
+By original author:
 
 Screenshot
 ===============
@@ -14,7 +19,7 @@ Features
 
 Extension Support
 ===============
-If you would like your Brackets to look like the screenshot you must install the following extensions 
+If you would like your Brackets to look like the screenshot you must install the following extensions
 * https://github.com/drewbkoch/Brackets-File-Icons
 * https://github.com/zaggino/brackets-git
 * https://github.com/Hirse/brackets-outline-list
