@@ -1,11 +1,11 @@
 {
-    "title": "Stripper (CLean UI Redo)",
+    "title": "Stripper (Clean UI Redo)",
     "name": "stripper-theme-redo",
     "description": "A brackets theme focused on readabiity. Based on the theme made by visualbam - https://github.com/visualbam/Brackets-Stripper",
     "version": "0.1.0",
     "authors": [
         "Bruce McElroy <bruce.mcelroy@gmail.com>",
-        "Hendry Sadrak <hendry.sadrak@outlook.com"
+        "Hendry Sadrak <hendry.sadrak@outlook.com>"
     ],
     "homepage": "https://github.com/hendrysadrak/Brackets-Stripper",
     "repository": {
