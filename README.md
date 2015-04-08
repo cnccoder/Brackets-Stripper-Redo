@@ -6,9 +6,12 @@ Useses modified version of [Monokai Dark Soda](https://github.com/rainje/Monokai
 
 By original author:
 
-Screenshot
+Screenshots
 ===============
+### By me:
 ![Brackets-Stripper](https://raw.githubusercontent.com/hendrysadrak/Brackets-Stripper/master/screenshots/stripper-ui.png)
+### Original:
+![Brackets-Stripper](http://i57.tinypic.com/6o2441.png)
 
 Features
 ===============
